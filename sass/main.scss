@@ -1,0 +1,42 @@
+@import './general';
+
+.film{
+    &__title{
+        padding: 10px 0;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+    }
+    &__menu{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &__item{
+        padding: 20px;
+        margin-bottom: 15px;
+        width: 290px;
+        background-color: blueviolet;
+        border-radius: 10px;
+        box-shadow: 0 2px 3px rgb(168, 166, 166);
+        &:hover{
+            transition: 0.3s;
+            transform: scale(1.01);
+        }
+    }
+    &__img{
+        width: 255px;
+    }
+    &__subtitle{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__subtitle{
+        margin: 10px 0;
+    }
+    &__time{
+        display: inline-block;
+        margin: 10px 0;
+    }
+}
