@@ -1,2 +1,2 @@
-const getElem = (param) => document.querySelector(param);
+const getElem = (param, child = document) => child.querySelector(param, child);
 const creatElem = (param) => document.createElement(param);
