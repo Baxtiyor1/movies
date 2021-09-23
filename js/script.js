@@ -27,7 +27,7 @@ renderGenres(films, elSelect)
 function renderFilms(filmArr, element){
     element.innerHTML = null
     filmArr.forEach((film) => {
-    
+        
         let newLi = creatElem('li');
         let newTitle = creatElem('h2');
         let newImg = creatElem('img');
@@ -71,21 +71,33 @@ renderFilms(films, elMenu);
 
 elForm.addEventListener('click', (e)=>{
     e.preventDefault()
-
+    
     let searchValue = elSearch.value.trim();
     let selectValue = elSelect.value.trim();
-
+    
     const regex = new RegExp(searchValue, 'gi')
-    4
+    const regex2 = new RegExp(selectValue, 'gi')
+    
     let filterArray = films.filter(film => film.title.match(regex))
-
-
-
-    // if(selectValue === 'All'){
-    //     console.log(films)
-    // }else if(searchValue = selectValue){
-    //     console.log(films.genres)
-    // }
-
-    renderFilms(filterArray, elMenu)
+    
+    let GenereArray = filterArray.filter(film => {
+        let result = null;
+        for(let i = 0; i < film.genres.length; i++){
+            result += film.genres[i].match(regex2)
+            console.log(result);
+        }
+        return result
+    } )
+    
+    
+    GenereArray.filter(event => {
+        filterArray.forEach(item => event == item && event)
+    })
+    
+    
+    if(selectValue == 'All'){
+        renderFilms(filterArray, elMenu)
+    }else{
+        renderFilms(GenereArray, elMenu)
+    }
 })

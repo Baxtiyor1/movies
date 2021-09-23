@@ -21,11 +21,56 @@ a {
   margin: 0 auto;
 }
 
+.film {
+  background-color: #000;
+}
+
 .film__title {
   padding: 10px 0;
   background-color: #000;
-  color: #fff;
+  color: red;
+  border-bottom: 1px solid red;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.film__form {
+  background-color: #000;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.film__info {
+  margin-right: 20px;
+  width: 250px;
+  padding: 5px 10px;
+  border: 2px solid #ff2323;
+  -webkit-box-shadow: 0px 0px 4px 3px red;
+          box-shadow: 0px 0px 4px 3px red;
+  outline: none;
+}
+
+.film__btn {
+  width: 150px;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.film__btn:hover {
+  background-color: red;
+  -webkit-box-shadow: 0px 0px 4px 3px red;
+          box-shadow: 0px 0px 4px 3px red;
+  color: #fff;
 }
 
 .film__menu {
@@ -42,9 +87,10 @@ a {
 .film__item {
   padding: 20px;
   margin-bottom: 15px;
-  width: 290px;
-  background-color: blueviolet;
+  width: 285px;
+  background-color: red;
   border-radius: 10px;
+  color: #fff;
   -webkit-box-shadow: 0 2px 3px #a8a6a6;
           box-shadow: 0 2px 3px #a8a6a6;
 }
@@ -72,5 +118,6 @@ a {
 .film__time {
   display: inline-block;
   margin: 10px 0;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

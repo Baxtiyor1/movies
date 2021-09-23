@@ -1,11 +1,42 @@
 @import './general';
 
 .film{
+    background-color: #000;
     &__title{
         padding: 10px 0;
         background-color: #000;
-        color: #fff;
+        color: red;
+        border-bottom: 1px solid red;
         text-align: center;
+        text-transform: uppercase;
+    }
+    &__form{
+        background-color: #000;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    &__info{
+        margin-right: 20px;
+        width: 250px;
+        padding: 5px 10px;
+        border: 2px solid rgb(255, 35, 35);
+        box-shadow: 0px 0px 4px 3px red;
+        outline: none;
+    }
+    &__btn{
+        width: 150px;
+        border: none;
+        transition: 0.5s;
+        cursor: pointer;
+        font-weight: bold;
+        &:hover{
+            background-color: red;
+            box-shadow: 0px 0px 4px 3px red;
+            color: #fff;
+            
+        }
     }
     &__menu{
         margin-top: 20px;
@@ -16,9 +47,10 @@
     &__item{
         padding: 20px;
         margin-bottom: 15px;
-        width: 290px;
-        background-color: blueviolet;
+        width: 285px;
+        background-color: red;
         border-radius: 10px;
+        color: #fff;
         box-shadow: 0 2px 3px rgb(168, 166, 166);
         &:hover{
             transition: 0.3s;
@@ -38,5 +70,6 @@
     &__time{
         display: inline-block;
         margin: 10px 0;
+        color: #fff;
     }
 }
