@@ -27,6 +27,7 @@
     }
     &__btn{
         width: 150px;
+        height: 30px;
         border: none;
         transition: 0.5s;
         cursor: pointer;
@@ -71,5 +72,17 @@
         display: inline-block;
         margin: 10px 0;
         color: #fff;
+    }
+}
+@media screen and (max-width: 768px) {
+    .film{
+        &__form{
+            flex-direction: column;
+            padding: 20px 0;
+            align-items: center;
+        }
+        &__info{
+            margin-bottom: 20px;
+        }
     }
 }
