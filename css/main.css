@@ -21,17 +21,23 @@ a {
   margin: 0 auto;
 }
 
+.header {
+  background-color: #000;
+  border-bottom: 1px solid red;
+  padding: 10px 0;
+}
+
 .film {
   background-color: #000;
 }
 
 .film__title {
-  padding: 10px 0;
-  background-color: #000;
-  color: red;
-  border-bottom: 1px solid red;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#beb8b8, #fd0303);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .film__form {
@@ -60,7 +66,7 @@ a {
 .film__btn {
   width: 150px;
   height: 30px;
-  border: none;
+  border: 2px solid red;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
@@ -85,7 +91,7 @@ a {
       justify-content: space-around;
 }
 
-.film__item {
+.film__card {
   padding: 20px;
   margin-bottom: 15px;
   width: 285px;
@@ -94,30 +100,62 @@ a {
   color: #fff;
   -webkit-box-shadow: 0 2px 3px #a8a6a6;
           box-shadow: 0 2px 3px #a8a6a6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.film__item:hover {
+.film__card:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
 }
 
-.film__img {
-  width: 255px;
-}
-
-.film__subtitle {
+.film__card--title {
   text-align: center;
   text-transform: uppercase;
-}
-
-.film__subtitle {
   margin: 10px 0;
 }
 
-.film__time {
-  display: inline-block;
+.film__card--btn {
+  padding: 5px 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: gold;
+  -webkit-box-shadow: 0 0 2px 2px gold;
+          box-shadow: 0 0 2px 2px gold;
+}
+
+.film__card--btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.film__pic {
+  width: 255px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+
+.film__realise--date {
   margin: 10px 0;
   color: #fff;
 }

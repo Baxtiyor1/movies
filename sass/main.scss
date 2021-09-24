@@ -1,14 +1,19 @@
 @import './general';
 
+.header{
+    background-color: #000;
+    border-bottom: 1px solid red;
+    padding: 10px 0;
+}
 .film{
     background-color: #000;
     &__title{
-        padding: 10px 0;
-        background-color: #000;
-        color: red;
-        border-bottom: 1px solid red;
         text-align: center;
         text-transform: uppercase;
+        font-weight: bold;
+        background: -webkit-linear-gradient(rgb(190, 184, 184), rgb(253, 3, 3), );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     }
     &__form{
         background-color: #000;
@@ -28,7 +33,7 @@
     &__btn{
         width: 150px;
         height: 30px;
-        border: none;
+        border: 2px solid red;
         transition: 0.5s;
         cursor: pointer;
         font-weight: bold;
@@ -45,7 +50,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    &__item{
+    &__card{
         padding: 20px;
         margin-bottom: 15px;
         width: 285px;
@@ -53,23 +58,40 @@
         border-radius: 10px;
         color: #fff;
         box-shadow: 0 2px 3px rgb(168, 166, 166);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         &:hover{
             transition: 0.3s;
             transform: scale(1.01);
         }
+        &--title{
+            text-align: center;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+        &--btn{
+            padding: 5px 25px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 0, 0);
+            color: gold;
+            box-shadow: 0 0 2px 2px gold;
+            &:hover{
+                transform: scale(1.05);
+                transition: 0.5s;
+            }
+        }
     }
-    &__img{
+    &__pic{
         width: 255px;
+        height: 300px;
+        object-fit: cover;
+        object-position: top center;
     }
-    &__subtitle{
-        text-align: center;
-        text-transform: uppercase;
-    }
-    &__subtitle{
-        margin: 10px 0;
-    }
-    &__time{
-        display: inline-block;
+    &__realise--date{
         margin: 10px 0;
         color: #fff;
     }

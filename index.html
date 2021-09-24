@@ -8,18 +8,36 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <header class="header">
+            <h1 class="film__title">Movies</h1>
+    </header>
     
     <section class="film">
         <div class="container">
-            <h1 class="film__title">Films</h1>
             <form class="film__form" id='form'>
                 <input class="film__info" type="text" id="search" placeholder="search ...">
                 <select class="film__info" id="select">
                     <option value="All">All</option>
                 </select>
+                <select class="film__info" id="film__filter">
+                    <option value="a_z">A-Z</option>
+                    <option value="z_a">Z-A</option>
+                    <option value="new_old">NEW-OLD</option>
+                    <option value="old_new">OLD-NEW</option>
+                </select>
                 <button class="film__btn" type="submit" id="btn">Submit</button>
             </form>
             <ul class="film__menu"></ul>
+
+
+            <template id="template">
+                <li class="film__card">
+                    <img class="film__pic" src="https://picsum.photos/300" alt="img" width="300" height="250">
+                    <h2 class="film__card--title">Shazam!</h2>
+                    <time class="film__realise--date">01.01.1000</time>
+                    <button class="film__card--btn" type="submit" id="card_btn">Show more</button>
+                </li>
+            </template>
         </div>
     </section>
     
