@@ -52,6 +52,7 @@ a {
 }
 
 .film {
+  min-height: 82vh;
   background-color: #000;
 }
 
@@ -202,5 +203,17 @@ a {
   .film__info {
     margin-bottom: 20px;
   }
+}
+
+.footer {
+  padding: 20px 0;
+  background: #000;
+  border-top: 1px solid #fff;
+}
+
+.footer__text {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */

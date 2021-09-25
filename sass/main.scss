@@ -7,6 +7,7 @@
     box-shadow: 0 2px 5px rgb(168, 166, 166);
 }
 .film{
+    min-height: 82vh;
     background-color: #000;
     &__title{
         text-align: center;
@@ -115,3 +116,13 @@
         }
     }
 }
+.footer{
+    padding: 20px 0;
+    background: #000;
+    border-top: 1px solid #fff;
+    &__text{
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+    }
+} 
