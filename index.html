@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Films</title>
+    <title>Movies</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+
 </head>
 <body>
     <header class="header">
@@ -31,7 +35,7 @@
 
 
             <template id="template">
-                <li class="film__card">
+                <li data-aos="zoom-in" class="film__card">
                     <img class="film__pic" src="https://picsum.photos/300" alt="img" width="300" height="250">
                     <h2 class="film__card--title">Shazam!</h2>
                     <time class="film__realise--date">01.01.1000</time>
@@ -40,6 +44,10 @@
             </template>
         </div>
     </section>
+
+    <script>
+        AOS.init();
+      </script>
     
     <script src="./js/util.js"></script>
     <script src="./js/films.js"></script>

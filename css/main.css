@@ -133,17 +133,18 @@ a {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: red;
-  color: gold;
-  -webkit-box-shadow: 0 0 2px 2px gold;
-          box-shadow: 0 0 2px 2px gold;
+  color: #fff;
+  -webkit-box-shadow: 0 0 2px 2px #fff;
+          box-shadow: 0 0 2px 2px #fff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000)) left/100% var(--d, 0%) no-repeat;
+  background: linear-gradient(#000 0 0) left/100% var(--d, 0%) no-repeat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .film__card--btn:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  --d: 100%;
+  color: #fff;
 }
 
 .film__pic {

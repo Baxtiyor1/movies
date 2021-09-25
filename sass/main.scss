@@ -12,7 +12,7 @@
         text-transform: uppercase;
         font-weight: bold;
         background: -webkit-linear-gradient(rgb(190, 184, 184), rgb(253, 3, 3), );
-  -webkit-background-clip: text;
+        -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     }
     &__form{
@@ -76,12 +76,15 @@
             cursor: pointer;
             border: none;
             border-radius: 5px;
-            background-color: rgb(255, 0, 0);
-            color: gold;
-            box-shadow: 0 0 2px 2px gold;
+            color: #fff;
+            box-shadow: 0 0 2px 2px #fff;
+            background:
+              linear-gradient(#000 0 0) 
+              left /100% var(--d, 0%) no-repeat;
+            transition: 0.5s;
             &:hover{
-                transform: scale(1.05);
-                transition: 0.5s;
+                --d: 100%;
+                color: #fff;
             }
         }
     }

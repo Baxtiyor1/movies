@@ -19,7 +19,7 @@ function renderFilms(FilmsArray, element){
         getElem('.film__realise--date', cloneTemplate).datetime = normalizeDate(film.release_date)
 
         element.appendChild(cloneTemplate);
-        console.log(elMenu)
+        // console.log(elMenu)
     });
 }
 
