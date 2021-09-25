@@ -1,3 +1,21 @@
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/montserrat-v18-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v18-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-600 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/montserrat-v18-latin-600.woff2") format("woff2"), url("../fonts/montserrat-v18-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 *,
 *::before,
 *::after {
@@ -5,6 +23,10 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Montserrat';
 }
 
 ul {
@@ -23,8 +45,10 @@ a {
 
 .header {
   background-color: #000;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #fff;
   padding: 10px 0;
+  -webkit-box-shadow: 0 2px 5px #a8a6a6;
+          box-shadow: 0 2px 5px #a8a6a6;
 }
 
 .film {
@@ -57,10 +81,12 @@ a {
   margin-right: 20px;
   width: 250px;
   padding: 5px 10px;
-  border: 2px solid #ff2323;
-  -webkit-box-shadow: 0px 0px 4px 3px red;
-          box-shadow: 0px 0px 4px 3px red;
+  border: none;
+  -webkit-box-shadow: 0 2px 20px #a8a6a6;
+          box-shadow: 0 2px 20px #a8a6a6;
   outline: none;
+  background: rgba(119, 116, 116, 0.424);
+  color: #fff;
 }
 
 .film__btn {
@@ -71,6 +97,7 @@ a {
   transition: 0.5s;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 2px;
 }
 
 .film__btn:hover {
@@ -95,11 +122,9 @@ a {
   padding: 20px;
   margin-bottom: 15px;
   width: 285px;
-  background-color: red;
+  background-color: rgba(95, 81, 81, 0.253);
   border-radius: 10px;
   color: #fff;
-  -webkit-box-shadow: 0 2px 3px #a8a6a6;
-          box-shadow: 0 2px 3px #a8a6a6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,6 +145,8 @@ a {
   transition: 0.3s;
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
+  -webkit-box-shadow: 0 2px 20px #a8a6a6;
+          box-shadow: 0 2px 20px #a8a6a6;
 }
 
 .film__card--title {
@@ -136,15 +163,15 @@ a {
   color: #fff;
   -webkit-box-shadow: 0 0 2px 2px #fff;
           box-shadow: 0 0 2px 2px #fff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000)) left/100% var(--d, 0%) no-repeat;
-  background: linear-gradient(#000 0 0) left/100% var(--d, 0%) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) left/100% var(--d, 0%) no-repeat;
+  background: linear-gradient(#fff 0 0) left/100% var(--d, 0%) no-repeat;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .film__card--btn:hover {
   --d: 100%;
-  color: #fff;
+  color: #000;
 }
 
 .film__pic {
