@@ -7,6 +7,7 @@ var films = [
 			'A boy is given the ability to become an adult superhero in times of need with a single magic word.',
 		release_date: 1553299200,
 		genres: ['Action', 'Comedy', 'Fantasy'],
+		link: 'https://kinohit.me/russian-film-kino-tasix-tas-uz-uzbekistan/fentezi/10096-shazam.html',
 	},
 	{
 		id: '299537',

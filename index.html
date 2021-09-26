@@ -9,11 +9,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-
+    
 </head>
 <body>
     <header class="header">
-            <h1 class="film__title">Movies</h1>
+        <h1 class="film__title">Movies</h1>
     </header>
     
     <section class="film">
@@ -32,8 +32,19 @@
                 <button class="film__btn" type="submit" id="btn">Submit</button>
             </form>
             <ul class="film__menu"></ul>
-
-
+            
+            <div data-aos="zoom-in" class="modal">
+                <div class="modal__list">
+                    <button class="modal__btn" type="submit" id="modal__btn">x</button>
+                    <div class="modal__box">
+                        <img class="modal__img">
+                        <ul class="modal__ganres"></ul>
+                    </div>
+                    <p class="modal__text"></p>
+                    <a class="modal__link">see film</a>
+                </div>
+            </div>
+            
             <template id="template">
                 <li data-aos="zoom-in" class="film__card">
                     <img class="film__pic" src="https://picsum.photos/300" alt="img" width="300" height="250">
@@ -44,16 +55,16 @@
             </template>
         </div>
     </section>
-
+    
     <footer class="footer">
         <div class="container">
             <p class="footer__text">Baxtiyor © 2021</p>
         </div>
     </footer>
-
+    
     <script>
         AOS.init();
-      </script>
+    </script>
     
     <script src="./js/util.js"></script>
     <script src="./js/films.js"></script>
