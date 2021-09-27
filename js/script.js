@@ -25,24 +25,27 @@ function renderFilms(FilmsArray, element){
         let CardBtn = getElem('.film__card--btn', cloneTemplate)
         CardBtn.dataset.film_id = film.id
         
+        let newGanres = getElem('.modal__ganres')
         CardBtn.addEventListener('click', (item) =>{
             // item.preventDefault()
             elModal.classList.add('modal__active')
-            let findFilm = films.find(film => film.id === CardBtn.dataset.film_id)
-            let newGanres = getElem('.modal__ganres')
+            let findFilm = films.find(film => film.id === CardBtn.dataset.film_id) 
             let ModalImg = getElem('.modal__img').src = findFilm.poster
             let ModalContent = getElem('.modal__text').textContent = findFilm.overview
-            // let FilmLink = getElem('modal__link')
-            // FilmLink.href = findFilm.link
-            // console.log(FilmLink)
-
-            findFilm.genres.forEach(ganre =>{
-                let newLi = creatElem('li')
-                newLi.setAttribute('class', 'modal__ganre')
-                newLi.textContent = ganre
-
-                newGanres.appendChild(newLi)
-            })
+            let FilmLink = getElem('.modal__link')
+            FilmLink.href = findFilm.link
+            
+            function findfunction(arr, element){
+                element.innerHTML = null
+                arr.genres.forEach(ganre =>{
+                    let newLi = creatElem('li')
+                    newLi.setAttribute('class', 'modal__ganre')
+                    newLi.textContent = ganre
+                    
+                    element.appendChild(newLi)
+                })
+            }
+            findfunction(findFilm, newGanres)
         })
         
         elModalBtn.addEventListener('click', (item)=>{

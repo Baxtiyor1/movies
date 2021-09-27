@@ -7,7 +7,7 @@ var films = [
 			'A boy is given the ability to become an adult superhero in times of need with a single magic word.',
 		release_date: 1553299200,
 		genres: ['Action', 'Comedy', 'Fantasy'],
-		link: 'https://kinohit.me/russian-film-kino-tasix-tas-uz-uzbekistan/fentezi/10096-shazam.html',
+		link: 'https://youtu.be/1T6iVq0Qxos',
 	},
 	{
 		id: '299537',
@@ -17,6 +17,7 @@ var films = [
 			'The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.',
 		release_date: 1551830400,
 		genres: ['Action', 'Adventure', 'Science Fiction'],
+		link: 'https://youtu.be/HBFrura5II4'
 	},
 	{
 		id: '522681',
@@ -26,6 +27,7 @@ var films = [
 			'Six strangers find themselves in circumstances beyond their control, and must use their wits to survive.',
 		release_date: 1546473600,
 		genres: ['Thriller', 'Action', 'Horror', 'Science Fiction'],
+		link: 'https://youtu.be/4LGB-JMBB8w'
 	},
 	{
 		id: '166428',
@@ -35,6 +37,7 @@ var films = [
 			'As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless’ discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup’s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind.',
 		release_date: 1546473600,
 		genres: ['Animation', 'Family', 'Adventure'],
+		link: 'https://youtu.be/7aOYwgatbN0'
 	},
 	{
 		id: '450465',
@@ -44,6 +47,7 @@ var films = [
 			'In a series of escalating encounters, security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities. Meanwhile, the shadowy presence of Elijah Price emerges as an orchestrator who holds secrets critical to both men.',
 		release_date: 1547596800,
 		genres: ['Documentary'],
+		link: 'https://www.kinopoisk.ru/film/1044601/'
 	},
 	{
 		id: '495925',
@@ -53,6 +57,7 @@ var films = [
 			"The story is based on Robert Louis Stevenson's Treasure Island novel.",
 		release_date: 1520035200,
 		genres: ['Animation'],
+		link: 'https://youtu.be/746nALTXlKY'
 	},
 	{
 		id: '329996',
@@ -62,6 +67,7 @@ var films = [
 			'A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer.',
 		release_date: 1553644800,
 		genres: ['Adventure', 'Family', 'Fantasy'],
+		link: 'https://youtu.be/WkrrVWME1J8'
 	},
 	{
 		id: '299536',
@@ -71,6 +77,7 @@ var films = [
 			'As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.',
 		release_date: 1524618000,
 		genres: ['Adventure', 'Action', 'Science Fiction'],
+		link: 'https://youtu.be/lAbMtFUHPfc'
 	},
 	{
 		id: '458723',
@@ -80,6 +87,7 @@ var films = [
 			'Husband and wife Gabe and Adelaide Wilson take their kids to their beach house expecting to unplug and unwind with friends. But as night descends, their serenity turns to tension and chaos when some shocking visitors arrive uninvited.',
 		release_date: 1552521600,
 		genres: ['Documentary', 'Family'],
+		link: 'https://youtu.be/RZnFT9lz5pI'
 	},
 	{
 		id: '424783',
@@ -89,6 +97,7 @@ var films = [
 			'On the run in the year 1987, Bumblebee finds refuge in a junkyard in a small Californian beach town. Charlie, on the cusp of turning 18 and trying to find her place in the world, discovers Bumblebee, battle-scarred and broken.  When Charlie revives him, she quickly learns this is no ordinary yellow VW bug.',
 		release_date: 1544832000,
 		genres: ['Action', 'Adventure', 'Science Fiction'],
+		link: 'https://youtu.be/WZsYRVtBjF8'
 	},
 	{
 		id: '920',
