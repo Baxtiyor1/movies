@@ -5,11 +5,15 @@ const elSelect = getElem('#select', elForm);
 const elFilter = getElem('#film__filter', elForm);
 const elBtn = getElem('#btn', elForm);
 const elTemplate = getElem('#template').content;
-
+const header = getElem('.header');
 const elModal = getElem('.modal')
+const elModalList = getElem('.modal__list')
 const elModalBtn = getElem('#modal__btn')
 const elModalimg = getElem('.modal__img')
 const elModaltext = getElem('.modal__text')
+
+
+console.log(header.offsetHeight);
 
 
 function renderFilms(FilmsArray, element){
@@ -28,7 +32,10 @@ function renderFilms(FilmsArray, element){
         let newGanres = getElem('.modal__ganres')
         CardBtn.addEventListener('click', (item) =>{
             // item.preventDefault()
-            elModal.classList.add('modal__active')
+           // elModal.classList.add('modal__active')
+            elModal.style.opacity = "1"
+            elModal.style.visibility = "visible"
+            elModalList.style.transform = "scale(1)"
             let findFilm = films.find(film => film.id === CardBtn.dataset.film_id) 
             let ModalImg = getElem('.modal__img').src = findFilm.poster
             let ModalContent = getElem('.modal__text').textContent = findFilm.overview
@@ -49,7 +56,12 @@ function renderFilms(FilmsArray, element){
         })
         
         elModalBtn.addEventListener('click', (item)=>{
-            elModal.classList.remove('modal__active')
+          //  elModal.classList.remove('modal__active')
+            elModalList.style.transform = "scale(0)"
+            setTimeout(() => {
+                elModal.style.opacity = "0"
+                elModal.style.visibility = "hidden"                
+            }, 600);
         })
         
         element.appendChild(cloneTemplate);
