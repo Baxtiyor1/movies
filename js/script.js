@@ -34,7 +34,7 @@ function renderFilms(FilmsArray, element){
             elModal.style.visibility = "visible"
             elModalList.style.transform = "scale(1)"
             let findFilm = films.find(film => film.id === CardBtn.dataset.film_id) 
-            let ModalImg = getElem('.modal__img').src = findFilm.poster
+            let ModalImg = getElem('.modal__img').src = findFilm.Poster
             let ModalContent = getElem('.modal__text').textContent = findFilm.overview
             let FilmLink = getElem('.modal__link')
             FilmLink.href = findFilm.link
