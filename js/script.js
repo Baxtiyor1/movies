@@ -94,31 +94,16 @@ renderGenres(films, elSelect)
 // key
 let KEY = '58ed228a'
 
-let newMovies = []
-
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    async function fetchMovies(){
-        newMovies = []
-        let findMovie = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${inputvalue}&page=1`) 
-        let data = await findMovie.json()
-        let movies = await data.Search
-        movies.forEach(movie =>{
-            if(!newMovies.includes(movie)){
-                newMovies.push(movie)
-            }
-        })
-        console.log(newMovies)
-        
-        renderFilms(newMovies, elMenu)
-    }
+    
     const inputvalue = elSearch.value.trim();
     const selectvalue = elSelect.value.trim();
     const filtervalue = elFilter.value.trim();
     
     const regex = new RegExp(inputvalue, 'gi');
     
-    const FilteredFilms = newMovies.filter((film) => film.Title.match(regex));
+    const FilteredFilms = films.filter((film) => film.Title.match(regex));
     
     let Overresult = [];
     
@@ -174,7 +159,6 @@ elForm.addEventListener('submit', (e) => {
     elSearch.value = ''
     
     
-    fetchMovies()
     renderFilms(Overresult, elMenu)
 })
 
