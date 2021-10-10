@@ -13,26 +13,23 @@ const elModalimg = getElem('.modal__img')
 const elModaltext = getElem('.modal__text')
 
 
-console.log(header.offsetHeight);
-
-
 function renderFilms(FilmsArray, element){
     element.innerHTML = null
     
     FilmsArray.forEach(film => {
         const cloneTemplate = elTemplate.cloneNode(true);
         
-        getElem('.film__pic', cloneTemplate).src = film.poster
-        getElem('.film__card--title', cloneTemplate).textContent = film.title
-        getElem('.film__realise--date', cloneTemplate).textContent = normalizeDate(film.release_date)
-        getElem('.film__realise--date', cloneTemplate).datetime = normalizeDate(film.release_date)
+        getElem('.film__pic', cloneTemplate).src = film.Poster
+        getElem('.film__card--title', cloneTemplate).textContent = film.Title
+        getElem('.film__realise--date', cloneTemplate).textContent = normalizeDate(film.Year)
+        getElem('.film__realise--date', cloneTemplate).datetime = normalizeDate(film.Year)
         let CardBtn = getElem('.film__card--btn', cloneTemplate)
         CardBtn.dataset.film_id = film.id
         
         let newGanres = getElem('.modal__ganres')
         CardBtn.addEventListener('click', (item) =>{
             // item.preventDefault()
-           // elModal.classList.add('modal__active')
+            // elModal.classList.add('modal__active')
             elModal.style.opacity = "1"
             elModal.style.visibility = "visible"
             elModalList.style.transform = "scale(1)"
@@ -56,7 +53,7 @@ function renderFilms(FilmsArray, element){
         })
         
         elModalBtn.addEventListener('click', (item)=>{
-          //  elModal.classList.remove('modal__active')
+            //  elModal.classList.remove('modal__active')
             elModalList.style.transform = "scale(0)"
             setTimeout(() => {
                 elModal.style.opacity = "0"
@@ -92,16 +89,36 @@ function renderGenres(FilmsArray, element){
 
 renderGenres(films, elSelect)
 
+
+
+// key
+let KEY = '58ed228a'
+
+let newMovies = []
+
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+    async function fetchMovies(){
+        newMovies = []
+        let findMovie = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${inputvalue}&page=1`) 
+        let data = await findMovie.json()
+        let movies = await data.Search
+        movies.forEach(movie =>{
+            if(!newMovies.includes(movie)){
+                newMovies.push(movie)
+            }
+        })
+        console.log(newMovies)
+        
+        renderFilms(newMovies, elMenu)
+    }
     const inputvalue = elSearch.value.trim();
     const selectvalue = elSelect.value.trim();
     const filtervalue = elFilter.value.trim();
     
     const regex = new RegExp(inputvalue, 'gi');
     
-    const FilteredFilms = films.filter((film) => film.title.match(regex));
+    const FilteredFilms = newMovies.filter((film) => film.Title.match(regex));
     
     let Overresult = [];
     
@@ -111,11 +128,12 @@ elForm.addEventListener('submit', (e) => {
         Overresult = FilteredFilms.filter(film => film.genres.includes(selectvalue))
     }
     
+    
     if(filtervalue === 'a_z'){
         Overresult.sort((a, b) =>{
-            if(a.title > b.title){
+            if(a.Title > b.Title){
                 return 1
-            }else if(a.title < b.title){
+            }else if(a.Title < b.Title){
                 return -1
             }else{
                 return 0
@@ -123,9 +141,9 @@ elForm.addEventListener('submit', (e) => {
         })
     }else if(filtervalue === 'z-a'){
         Overresult.sort((b, a) =>{
-            if(a.title > b.title){
+            if(a.Title > b.Title){
                 return 1
-            }else if(a.title < b.title){
+            }else if(a.Title < b.Title){
                 return -1
             }else{
                 return 0
@@ -133,9 +151,9 @@ elForm.addEventListener('submit', (e) => {
         })
     }else if(filtervalue === 'new_old'){
         Overresult.sort((a, b) =>{
-            if(a.release_date > b.release_date){
+            if(a.Year > b.Year){
                 return 1
-            }else if(a.release_date < b.release_date){
+            }else if(a.Year < b.Year){
                 return -1
             }else{
                 return 0
@@ -143,9 +161,9 @@ elForm.addEventListener('submit', (e) => {
         })
     }else if(filtervalue === 'old_new'){
         Overresult.sort((b, a) =>{
-            if(a.release_date > b.release_date){
+            if(a.Year > b.Year){
                 return 1
-            }else if(a.release_date < b.release_date){
+            }else if(a.Year < b.Year){
                 return -1
             }else{
                 return 0
@@ -155,8 +173,11 @@ elForm.addEventListener('submit', (e) => {
     
     elSearch.value = ''
     
+    
+    fetchMovies()
     renderFilms(Overresult, elMenu)
 })
+
 
 
 
@@ -270,7 +291,7 @@ elForm.addEventListener('submit', (e) => {
 //             GenreList.appendChild(newGenreli)
 //         })
 
-//         let date = new Date(film.release_date)
+//         let date = new Date(film.Year)
 //         let data = `${date.getDay()}.${date.getMonth() + 1}.${date.getFullYear()}`
 
 //         newLi.setAttribute('class', 'film__item')
